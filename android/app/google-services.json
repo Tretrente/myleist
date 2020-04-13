@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "276919026246",
+    "firebase_url": "https://speedy-5011d.firebaseio.com",
+    "project_id": "speedy-5011d",
+    "storage_bucket": "speedy-5011d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276919026246:android:a95839eabc8c836c9a4047",
+        "android_client_info": {
+          "package_name": "com.example.firstflutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276919026246-tqdck04r5bthbe7a8sf6bdr75cvglhtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD--7o-E_hnrTHETQ2HNyRJjrIbxdU-sfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276919026246-tqdck04r5bthbe7a8sf6bdr75cvglhtg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
