@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firstflutterapp/pages/home.dart';
 
-class List extends StatefulWidget {
-  @override
-  _ListState createState() => _ListState();
+class list {
+  String list_name;
+  list({ this.list_name });
 }
-
-class _ListState extends State<List> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-

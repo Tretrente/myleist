@@ -1,3 +1,4 @@
+import 'package:firstflutterapp/pages/list.dart';
 import 'package:flutter/material.dart';
 import 'package:firstflutterapp/pages/new_list.dart';
 
@@ -12,6 +13,19 @@ class _HomeState extends State<Home> {
     myController.dispose();
     super.dispose();
   }
+  Widget list_creation(list){
+    return Card(
+      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
+      child: Column(
+        children: <Widget>[
+          Text(
+            list.text,
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +81,9 @@ class _HomeState extends State<Home> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: RaisedButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+
+                          },
                           color: Colors.green[200],
                           icon: Icon(
                             Icons.check_circle,
