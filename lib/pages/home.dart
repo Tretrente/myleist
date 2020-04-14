@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:firstflutterapp/pages/new_list.dart';
 
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
-
 class _HomeState extends State<Home> {
+  final myController = TextEditingController();
+  @override
+  void dispose() {
+    myController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +38,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   content: TextField(
+                    controller: myController,
                     decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -77,6 +84,7 @@ class _HomeState extends State<Home> {
         child: Icon(Icons.add),
         backgroundColor: Colors.blue,
       ),
+
     );
   }
 }
