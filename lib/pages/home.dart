@@ -7,12 +7,14 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 class _HomeState extends State<Home> {
+  //Controller for reading input text from text boxes
   final myController = TextEditingController();
   @override
   void dispose() {
     myController.dispose();
     super.dispose();
   }
+  //Widget for the creation of a new list.
   Widget list_creation(list){
     return Card(
       margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
@@ -25,7 +27,7 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-
+//Widget with the app home screen
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +71,9 @@ class _HomeState extends State<Home> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: RaisedButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            //TODO make this button close the alert dialog
+                          },
                           label: Text('Delete list'),
                           color: Colors.red[200],
                           icon: Icon(
@@ -82,7 +86,8 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.all(8.0),
                         child: RaisedButton.icon(
                           onPressed: () {
-
+                            //TODO make this button save the input text form the text box
+                            //and create a new card with the list name
                           },
                           color: Colors.green[200],
                           icon: Icon(
