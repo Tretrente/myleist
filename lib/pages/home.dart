@@ -2,6 +2,8 @@ import 'package:firstflutterapp/pages/list.dart';
 import 'package:flutter/material.dart';
 import 'package:firstflutterapp/pages/new_list.dart';
 
+ListCreation listCreation = ListCreation();
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -15,22 +17,12 @@ class _HomeState extends State<Home> {
     super.dispose();
   }
 
-
-  //Widget for the creation of a new list.
-  Widget list_creation(String list){
-    return Card(
-      color: Colors.grey,
-      elevation: 5.00,
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
-      child: Container(
-        child: ListTile(
-          title: Text(
-            "$list",
-          ),
-        )
-      ),
-    );
-  }
+bool isEmpty(String text) {
+    if (text == '')
+      return true;
+    else
+      return false;
+}
 
   void showAlertDialog(){
     showDialog(
@@ -69,7 +61,8 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(8.0),
                   child: RaisedButton.icon(
                     onPressed: () {
-                      //TODO make this button close the alert dialog
+                      Navigator.pop(context);
+                      myController.clear();
                     },
                     label: Text('Delete list'),
                     color: Colors.red[200],
@@ -83,8 +76,14 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(8.0),
                   child: RaisedButton.icon(
                     onPressed: () {
-                      //TODO make this button save the input text form the text box
-                      //and create a new card with the list name
+                      if(isEmpty(myController.text) == false) {
+                        setState(() {
+                          listCreation.todo.add(
+                              listCreation.listBuiler(myController.text));
+                        });
+                        Navigator.pop(context);
+                        myController.clear();
+                      }
                     },
                     color: Colors.green[200],
                     icon: Icon(
@@ -112,9 +111,7 @@ class _HomeState extends State<Home> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[
-            
-          ],
+          children: listCreation.todo
         ),
       ),
       floatingActionButton: FloatingActionButton(
