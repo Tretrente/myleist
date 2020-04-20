@@ -1,6 +1,6 @@
 import 'package:firstflutterapp/pages/list.dart';
 import 'package:flutter/material.dart';
-import 'package:firstflutterapp/pages/new_list.dart';
+
 
 ListCreation listCreation = ListCreation();
 
@@ -120,5 +120,6 @@ bool isEmpty(String text) {
           backgroundColor: Colors.blue,
       ),
     );
+
   }
 }
